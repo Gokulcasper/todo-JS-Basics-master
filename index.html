@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <div class="todoContainer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+        <h1 class="todo-Heading">TODOs</h1>
+        <h2 class="create-Task-Heading">Create Task</h2>
+        <input type="text" class="todo-class-input" id="todo-id-input" placeholder="Enter Learning Subject"><br>
+        <button class="todo-class-button" id="todo-id-addButton">Add</button>
+        <h2>My Tasks</h2>
+        <ul class="todoList-Class" id="todoList-id">
+            <!-- <input type="checkbox" id="addItem">
+            <label for="addItem">Name</label> -->
+        </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- let addItemContainer = document.getElementById("todoList-id");
+let todoInputId = document.getElementById("todo-id-input");
+let todoAddButton = document.getElementById("todo-id-addButton");
+
+let todoList= [
+    {
+        text:" Learn Html ",
+        id:1
+    },
+    {
+        text:" Learn Css ",
+        id:2
+    },
+    {
+        text:" Learn JS ",
+        id:3
+    },
+]
+
+let todoListCounts = todoList.length;
+
+function onTodoStatusChange(labelId)
+{
+    // let checkboxIdElement = document.getElementById(checkbox);
+    
+    let labelIdElement = document.getElementById(labelId);
+labelIdElement.classList.toggle("checked");
+}
+
+
+function onDeleteTodo(todoId){
+let todoDeleteElement =document.getElementById(todoId);
+addItemContainer.removeChild(todoDeleteElement);
+}
+
+function createAndAppendTodo(todo){
+    let todoId ="todo" + todo.id;
+    let checkboxId ="checkbox" + todo.id;
+    let labelId ="label" + todo.id;
+
+
+    let liElement = document.createElement("li");
+liElement.classList.add("todo-li-class","d-flex","flex-row");
+liElement.id=todoId;
+addItemContainer.appendChild(liElement);
+
+let inputElement = document.createElement("input");
+inputElement.type="checkbox";
+inputElement.classList.add("checkboxClassInput");
+inputElement.id=checkboxId;
+    inputElement.onclick=function(){
+    onTodoStatusChange(labelId);
+}
+liElement.appendChild(inputElement);
+
+let divElement = document.createElement("div");
+divElement.classList.add("todo-divElement","d-flex","flex-row");
+liElement.appendChild(divElement);
+
+let labelElement = document.createElement("label");
+labelElement.textContent=todo.text;
+labelElement.setAttribute("for",checkboxId);
+labelElement.id=labelId;
+labelElement.classList.add("labelClassInput");
+divElement.appendChild(labelElement);
+
+let deleteDivElement = document.createElement("div");
+deleteDivElement.classList.add("delete-div-container")
+divElement.appendChild(deleteDivElement);
+
+let deleteIcon = document.createElement("i");
+deleteIcon.classList.add("ri-delete-bin-fill", "delete-icon" );
+
+deleteIcon.onclick = function(){
+    onDeleteTodo(todoId);
+};
+deleteDivElement.appendChild(deleteIcon)
+}
+
+for(let todo of todoList){
+createAndAppendTodo(todo);
+}
+
+
+function onAddTodo(){
+   let userInputValue = todoInputId.value;
+   console.log(userInputValue);
+   if(userInputValue == ""){
+    alert("Enter Value");
+    return;
+   }
+   todoListCounts = todoListCounts+1;
+   let newTodo = {
+    text:userInputValue,
+    id:todoListCounts,
+   };
+
+   createAndAppendTodo(newTodo);
+   todoInputId.value= " ";
+}
+
+
+
+
+todoAddButton.onclick=function(){
+    onAddTodo();
+} -->
